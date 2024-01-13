@@ -1,15 +1,15 @@
 class Square():
 
-    def move_update(info_d, info_o): 
-        # dice_r 값이 낙오(0)인 경우 loc값과 b_c값 변경
-        if info_d['dice_r'] == 0:
+    def move_update(self, info_d, info_o): 
+        # di_result 값이 낙오(0)인 경우 loc값과 b_c값 변경
+        if info_d['di_result'] == 0:
             info_d['loc'] = 0
             info_d['block_count'] = 0
         # block_count 값이 20일때 loc 값이 0이 되는 예외 처리
-        elif info_d['block_count'] + info_d['dice_r'] == 20:
+        elif info_d['block_count'] + info_d['di_result'] == 20:
                 info_d['loc'] = 20
         else:       
-            info_d['block_count'] += info_d['dice_r']
+            info_d['block_count'] += info_d['di_result']
             info_d['loc'] = info_d['block_count'] % 20
 
         # 올라탄 경우 동시이동과 그 다음 턴의 분리이동 구현
@@ -20,8 +20,8 @@ class Square():
             info_d['ride'] = 0
 
         elif info_o['loc'] == info_d['loc'] and info_o['ride'] == 0 and info_d['ride'] == 0 and info_d['loc'] != 0:
-            print(f"{info_d['nickname']}가 {info_o['nickname']}에게 업혔습니다.")
-            print(f"한 차례동안 {info_o['nickname']}의 움직임을 따라갑니다.")
+            print(f" {info_d['nickname']}가 {info_o['nickname']}에게 업혔습니다. ")
+            print(f" 한 차례동안 {info_o['nickname']}의 움직임을 따라갑니다. ")
             info_o['ride'] = 1
             info_d['ride'] = 2          
 

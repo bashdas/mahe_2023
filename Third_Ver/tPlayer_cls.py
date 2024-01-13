@@ -1,7 +1,7 @@
 class Player:
 
     def __init__(self):
-        self.info = {'nickname':'x', 'score':0, 'ride':0, 'loc':0, 'block_count':0, 'dice_r':0}
+        self.info = {'nickname':'x', 'score':0, 'ride':0, 'loc':0, 'block_count':0, 'di_result':0}
 
     def nk_name_in(self):
         N = input(" 닉네임을 입력하세요(한 개의 문자로 표현): ")
