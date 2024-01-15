@@ -8,7 +8,7 @@ from tDice_cls import *
 TRO.title_print()
 TRO.start_or_rule()
 
-# 각각의 플레이어를 생성 후 플레이어 정보 및 말에 저장합니다.
+# 각각의 플레이어를 생성 후 플레이어 닉네임을 입력받아 저장합니다.
 p1 = Player()
 print(" <첫 번째 참가자 정보 입력> ")
 p1.nk_name_in()
