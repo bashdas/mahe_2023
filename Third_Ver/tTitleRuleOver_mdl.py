@@ -40,7 +40,7 @@ def start_or_rule():
             start_q = input(" [ 게임 시작: Y ] ")
         
 
-# 점수 계산 및 승리자 저장 함수 
+# 점수 계산 및 승리자 출력 함수 
 
 def Game_over(p1_info, p2_info):
     print(" < 게임 결과 > ")
