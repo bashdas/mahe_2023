@@ -3,6 +3,9 @@ import random
 class Card():
     # '__'을 이용한 클래스 외부 접근 차단
     __remain_card = 10
+    # 외부 출력을 위한 변수 설정
+    remain_card = __remain_card
+
 
     @classmethod
     def judge_g_card(cls, info_d, info_o):
