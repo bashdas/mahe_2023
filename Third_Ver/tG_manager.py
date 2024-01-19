@@ -29,7 +29,7 @@ ground = square.create_ground()
 
 square.print_ground(ground)
 
-while Card.__remain_card != 0:
+while Card.remain_card != 0:
 ##########################################################
 
     # p1가 먼저 주사위를 던집니다. di_result 값을 p1 정보에 저장합니다.
@@ -47,7 +47,7 @@ while Card.__remain_card != 0:
 
     ##########################################################
 
-    if Card.__remain_card == 0:
+    if Card.remain_card == 0:
         break
 
     # p2의 차례, 주사위를 던진 후 di_result 값을 p2 정보에 저장합니다.
